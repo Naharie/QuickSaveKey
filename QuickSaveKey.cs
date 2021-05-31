@@ -13,35 +13,22 @@ namespace QuickSaveKey
 
 		public override void Load()
 		{
-			Properties = new ModProperties()
-			{
-				Autoload = true
-			};
-
 			quickSave = RegisterHotKey("Quick save", "F5");
 		}
 		public override void Unload()
 		{
-			base.Unload();
 			quickSave = null;
 		}
 
 		private static ModHotKey quickSave;
+
 		public override void HotKeyPressed(string name)
 		{
-			bool IsLocalPlayer(Player player) => player.whoAmI == Main.myPlayer;
-
-			var playerData = Main.ActivePlayerFileData;
-
-			if (!IsLocalPlayer(playerData.Player) || !quickSave.JustPressed)
-			{
-				return;
-			}
+			if (!quickSave.JustPressed) return;
 
 			Main.SaveRecent();
 			Main.SaveSettings();
 
-			// Singleplayer
 			if (Main.netMode == NetmodeID.SinglePlayer)
 			{
 				WorldGen.saveToonWhilePlaying();
@@ -49,7 +36,6 @@ namespace QuickSaveKey
 
 				Main.NewText("Game saved.", 0, 200, 0);
 			}
-			// Multiplayer
 			else
 			{
 				WorldGen.saveToonWhilePlaying();
