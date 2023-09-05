@@ -1,6 +1,7 @@
 displayName = QuickSaveKey
 author = Naharie
-version = 2.0.1
+version = 2.0.2
 hideCode = false
 hideResources = false
-homepage=https://github.com/Naharie/QuickSaveKey
+homepage = https://github.com/Naharie/QuickSaveKey
+side = Client
