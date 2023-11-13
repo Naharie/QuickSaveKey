@@ -1,4 +1,7 @@
 Adds a keyboard shortcut to save the player.
-If in a singleplayer world it will save both the player and the world.
-If in multiplayer, it will only save only the player.
+If in a single player world it will save both the player and the world.
+If in multiplayer, it will only save the player.
 Useful in large mod packs or other situations where the game is more prone to crashing. 
+
+In single player there is also a shortcut to quick load the last save for both the player and the world.
+This *does not* work in multiplayer due to this being a client only mod and attempting to use the shortcut in multiplayer will print a warning.

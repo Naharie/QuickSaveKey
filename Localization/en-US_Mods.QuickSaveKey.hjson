@@ -1,1 +1,4 @@
-"Keybinds.Quick Save.DisplayName": Quick  Save
+Keybinds: {
+	"Quick Save.DisplayName": Quick  Save
+	"Quick Load.DisplayName": Quick  Load
+}
